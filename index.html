@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+        <meta charset="UTF-8">
+        <title>秀秀赢口红-正品口红免费领</title>
+        <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+        <meta name="format-detection" content="telephone=yes" />
+		<meta name="Keywords" content="秀秀赢口红,赢口红,抓娃娃,口红机">
+		<meta name="description" content="秀秀赢口红,这是最近在抖音上十分火的一个游戏，就是飞刀挑战的玩法，变成了口红发射，你需要闯过三关才可以免费获得正品口红，玩法简单，把口红射完即可！">
+       
+		<script src="flexible.js"></script>
+        <script src="public.js?v=2"></script>
+        <script src="./jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="iconfont.css">
+        <script>
+        var jumphref = 'http://kh.huamuzx.com/';
+            $(function(){
+
+                $('body').scrollTop(999);
+                var os = getOS()
+                var env = getEnv()
+                var share = getParams() && getParams()['share']
+                if(share == 1){
+                    //$(".tip").html('下载APP即可领取价值 <b>20元游戏币</b>')
+                }
+                if(os == 'ios') {
+                    //$("#icon").addClass("icon-ios")
+					
+                }
+                if(os == 'android') {
+                    $("#icon").addClass("icon-ai-app");
+					$("#btnTxt").html("立刻下载");
+					jumphref = 'http://kh.huamuzx.com/uploads/xxkh-release.apk';
+                }
+                console.log(env)
+                console.log(os)
+				
+                /*$.getJSON(URL+'/game/getConfig',function(res){
+                    if(res.status == 1){
+                        $("#button").click(function(){
+                            if(os == 'ios') {
+                                var ios = res.results.download.ios
+                                if(!ios) {
+                                    return alert('即将上线，敬请期待！')
+                                }
+                                if(env == 'wechat') return $("#modal").fadeIn()
+                                jumphref = ios
+                                $(".fixed").show();
+                                
+                            }
+                            if(os == 'android') {
+                                var android = res.results.download.android
+                                if(!android){
+                                    return alert('即将上线，敬请期待！')
+                                }
+                                //if(env == 'wechat') return $("#modal").fadeIn()
+                                window.location.href = android
+                            }
+                        })
+                        $("#modal").click(function(){
+                            $(this).fadeOut()
+                        })
+                    }
+                })*/
+				$("#modal").click(function(){
+                            $(this).fadeOut()
+                        })
+						$("#button").click(function(){
+                            if(env == 'wechat' || env=='alipay' || env=='qq')  return $("#modal").fadeIn()
+							
+							window.location.href = jumphref;
+                        })
+            })
+        </script>
+        <style>
+        *{
+         -webkit-overflow-scrolling:touch;
+        }
+.download{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    text-align:center;
+}
+.download .head{
+    width:100%;
+}
+.download .post{
+    width:100%;
+}
+.download img{
+    width:100%;
+}
+.download .tip{
+    padding-top:1rem;
+    font-size:0.43rem;
+    font-family:PingFangSC-Regular;
+    font-weight:400;
+    color:rgba(71,71,71,1);
+    line-height:0.46rem;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.download .button{
+    margin:1rem 0;
+    text-align:center;
+    width:5.83rem;
+    background:#000000;
+    border:none;
+    color:#fff;
+    font-size:0.44rem;
+    font-family:PingFangSC-Regular;
+    font-weight:400;
+    color:rgba(255,255,255,1);
+    line-height:0.63rem;
+    padding:.5rem 0;
+    border-radius:99rem;
+}
+.download .button i.iconfont{
+    font-size:0.44rem;
+    line-height:0.63rem;
+}
+.download .modal{
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background:rgba(0,0,0,0.8);
+    padding-top:1.5rem;
+}
+.download .modal img{
+    width:80%;
+    margin:0 auto;
+}
+.fixed{
+    position: fixed;
+    width: 100%;
+    overflow: scroll;
+    overflow-x:hidden;
+    height:100%;
+    background-color: rgba(0,0,0,0.6);
+    display: none;
+    -webkit-overflow-scrolling = touch;
+}
+.fixed p{
+    color:#555;
+    margin-left:24px;
+    margin-right: 24px;
+    margin-top: 24px;
+}
+.two{
+    position: relative;
+    width: 96%;
+    margin:0 auto;
+    margin-top: 40px;
+    background-color: #f2f2f2;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.fixed img{
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 24px;
+}
+.title{
+    height:50px;
+    line-height: 50px;
+    background-color: #fff;
+    padding-left: 15px;
+    font-size: 16px;
+}
+.close{
+    position: relative;
+    height:70px;
+    margin-top: 10px;
+    background-color: #fff;
+    text-align: center;
+}
+.closebutton{
+    margin-top: 10px;
+    background-color: #fc0000;
+    border:none;
+    height: 50px;
+    padding: 10px 0;
+    width:70%;
+
+    color:#fff;
+    border-radius: 4px;
+    font-size: 20px;
+}
+        </style>
+    </head>
+    <body>
+      <div style="display:none">
+         
+      </div>
+      <div class="download">
+            <div class="head"><img src="posthead5.png" alt=""></div>
+            <div class="post"><img src="post.png" alt=""></div>
+            <div style="padding-top:0.2rem;line-height:0.36rem;" class="tip">抖音最火线上口红机，最低9元得正品口红</br></br>注册即送<span style="font-weight:bold;color:red;font-size:32px">&nbsp;9</span>&nbsp;元，每邀请一用户再送<span style="font-weight:bold;color:red;font-size:32px">&nbsp;9</span>&nbsp;元<span style="font-weight:bold"></span></div>
+            <button style="margin-top:0.5rem;" id="button" class="button"><i class="iconfont" id="icon">&nbsp;</i><span id="btnTxt">马上试试</span></button>
+            <div class="modal" style="display:none" id="modal">
+                <img src="click_download2.png" alt="">
+            </div>
+        </div>
+        <div class="fixed" style="display:none;">
+        <div class="two">
+         <div class="title">
+         "未受信任的企业级开发者"的解决办法
+         </div>
+         <p>因苹果公司的政策原因，在iOS系统中首次安装企业版应用时会出现"未受信任的企业级开发者"提示</p>
+         <img src="tip.png" alt="">
+         <p style="font-size: 16px">解决办法如下（以iOS12系统为例）：</p>
+         <p>1、在手机中打开设置功能，选择"通用"</p>
+         <img src="tip1.png" alt="">
+         <p>2、在通用中，选择"描述文件与设备管理"功能</p>
+         <img src="tip2.png" alt="">
+         <p>3、在描述文件与设备管理中的企业级应用分类中，选择要安装的企业应用的文件名称（与打开时的提示一致），点击进入</p>
+         <img src="tip3.png" alt="">
+         <p>4、进入企业签名页面后，确认企业签名中的公司名称与应用名称后，点击信任"企业签名公司名称"</p>
+         <img src="tip4.png" alt="">
+         <p>5、点击信任后，回到桌面，重新打开应用即可使用</p>
+         <img src="tip5.png" alt="">
+          <div class="close">
+            <Button class="closebutton" onclick="window.location.href = jumphref">我已了解 立刻下载</Button>
+         </div>
+        </div>
+
+  
+            
+        </div>
+    </body>
+
+<!-- Mirrored from activity.zgainn.com/download.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 14 Dec 2020 01:50:19 GMT -->
+</html>
